@@ -10,8 +10,7 @@ class CreateHouses < ActiveRecord::Migration[6.0]
       t.string :availabilty
       t.integer :price
       t.string :address
-
-      t.timestamps
+      # t.timestamps
     end
   end
 end

@@ -1,5 +1,5 @@
-class RemoveFloors < ActiveRecord::Migration[6.0]
-  def change
-    remove_column :houses, :floors, :integer
-  end
-end
+#class RemoveFloors < ActiveRecord::Migration[6.0]
+#  def change
+#    remove_column :houses, :floors, :integer
+#  end
+#end

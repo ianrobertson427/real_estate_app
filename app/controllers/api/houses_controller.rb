@@ -1,11 +1,21 @@
 class Api::HousesController < ApplicationController
 
-  #maybe these go here?
-  #def latitude
-  #end
+  @houses = House.all
+  render 'house_file.json.jb'
 
-  #def longitude
-  #end
+  def create
 
-  geocoded_by :address
+    @house = House.new(
+      description: params[:description],
+      year_built: params[:year_built],
+      square_feet: params[:square_feet],
+      bedrooms: params[:bedrooms],
+      bathrooms: params[:bathrooms],
+      floors: params[:floors],
+      availabilty: params[:availabilty],
+      price: params[:price],
+      address: address[:address]
+    )
+
+
 end
