@@ -1,10 +1,8 @@
 class Api::HousesController < ApplicationController
-
   @houses = House.all
-  render 'house_file.json.jb'
+  render "house_file.json.jb"
 
   def create
-
     @house = House.new(
       description: params[:description],
       year_built: params[:year_built],
@@ -14,8 +12,7 @@ class Api::HousesController < ApplicationController
       floors: params[:floors],
       availabilty: params[:availabilty],
       price: params[:price],
-      address: address[:address]
+      address: address[:address],
     )
-
-
+  end
 end
